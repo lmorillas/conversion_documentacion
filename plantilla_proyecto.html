@@ -1,0 +1,156 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+      @import url("https://themes.googleusercontent.com/fonts/css?kit=fpjTOVmNbO4Lz34iLyptLUXza5VhXqVC6o75Eld_V98");
+      @page {
+        size: A4; /* Change from the default size of A4 */
+        margin: 1cm; /* Set margin on each page */
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        font-size: 11px;
+        line-height: 1.5;
+        color: #000;
+        background-color: #fff;
+      }
+      .right {
+        text-align: right;
+      }
+      .center {
+        text-align: center;
+      }
+      .centerf {
+        display: flex;
+        justify-content: center;
+      }
+
+      .tabla {
+        width: 100%;
+      }
+      .td30 {
+        width: 30%;
+      }
+
+      .tablainicial {
+        border-collapse: collapse;
+        border: 2px solid #000;
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      .tablainicial td {
+        border: 1px solid #000;
+        padding: 3px;
+        margin: 5px;
+      }
+
+      .tablacontenido {
+        border-collapse: collapse;
+        border: 2px solid #000;
+        width: 100%;
+        margin-top: 20px;
+      }
+      .tablacontenido td {
+        border: 1px solid #000;
+        padding: 10px;
+        margin: 5px;
+      }
+      .sombreado {
+        background-color: #ccc;
+        font-weight: bold;
+        width: 15%;
+      }
+      p.c2 {
+        margin: 3px;
+      }
+      .mt-20 {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="tabla">
+      <tr>
+        <td class="td30">
+          <img
+            alt="logo.png"
+            src="file:./logo.png"
+            style="
+              width: 156.81px;
+              height: 52px;
+              margin-left: 0px;
+              margin-top: 0px;
+            "
+            title=""
+          />
+        </td>
+        <td><h3 class="center">Departamento de Informática</h3></td>
+        <td class="td30"><p class="right">2021-22</p></td>
+      </tr>
+    </table>
+
+    <p></p>
+
+    <table class="tablainicial">
+      <tbody>
+        <tr >
+          <td class="sombreado" colspan="1" rowspan="1">
+            <p >Alumno:</p>
+          </td>
+          <td  colspan="3" rowspan="1">
+            <p ><span >{{alumno}}</span></p>
+          </td>
+        </tr>
+        <tr >
+          <td class="sombreado" colspan="1" rowspan="1">
+            <p >Curso:</p>
+          </td>
+          <td  colspan="1" rowspan="1">
+            <p ><span >{{curso}}</span></p>
+          </td>
+          <td class="sombreado" colspan="1" rowspan="1">
+            <p >FECHA:</p>
+          </td>
+          <td class="c10" colspan="1" rowspan="1">
+            <p ><span >{{fecha}}</span></p>
+          </td>
+        </tr>
+        <tr >
+          <td class="sombreado" colspan="1" rowspan="1">
+            <p >Tutor:</p>
+          </td>
+          <td  colspan="3" rowspan="1">
+            <p ><span >{{tutor}}</span></p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p ><span ></span></p>
+    
+    <table class="tablacontenido">
+      <tbody>
+        <tr >
+          <td  colspan="1" rowspan="1">
+            <h4 class="center">PROPUESTA DEL MÓDULO DE PROYECTO</h4>
+          </td>
+        </tr>
+        <tr >
+          <td  colspan="1" rowspan="1">
+            <p >
+              <span >Título del Proyecto</span
+              ><span >:</span>
+            </p>
+            <p ><span >{{titulo}}</span></p>
+            {{contenido}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="mt-20 center">Zaragoza, a {{fecha_larga}}</p>
+    <p ><span ></span></p>
+    <p class="center">Fdo.: {{alumno}}</p>
+  </body>
+</html>
